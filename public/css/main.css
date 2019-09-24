@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: #eeeeee;
+  font-size: 1.1rem;
+  height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container .logo {
+  width: 120px;
+}
+
+.container h1 {
+  margin: 1em 0;
+}
+
+.container p {
+  line-height: 1.7rem;
+}
+
+.container .left {
+  background: linear-gradient(160deg, #601df7 0%, #8800ff 100%);
+  padding: 1em;
+}
+
+.container .left p,
+.container .left h1 {
+  color: #ffffff;
+}
+
+.container .left .light {
+  color: rgba(255, 255, 255, 0.7) !important;
+  margin-top: 2em;
+}
+
+.container .right .notify {
+  margin: 2em 0 1em;
+}
+
+.container .right .error {
+  margin: 0 0 1em;
+  padding: 0.5em 0;
+  font-size: 0.75em;
+  display: none;
+  text-align: left;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: #e53935;
+}
+
+.container .right .error-anim {
+  display: block;
+}
+
+.container .right #success {
+  display: none;
+}
+
+.container .right .right-inner {
+  padding: 1em;
+}
+
+.container .right input {
+  display: block;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0.75em 1em;
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+  border-radius: 0.2em;
+  -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+          box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.container .right input.button {
+  margin-top: 1em;
+  background: #8800ff;
+  color: #ffffff;
+  cursor: pointer;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: 50ms ease-in-out;
+  transition: 50ms ease-in-out;
+}
+
+.container .right input.button:hover {
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.fadeout {
+  -webkit-animation: fadeout 1s forwards;
+          animation: fadeout 1s forwards;
+}
+
+.fadein {
+  -webkit-animation: fadein 1s forwards;
+          animation: fadein 1s forwards;
+  display: block !important;
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    display: block;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    display: block;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    display: block;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 1.25rem;
+  }
+  .right-inner {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .error {
+    width: 59%;
+    margin: 0 auto;
+    text-align: center;
+    display: inline-block;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .logo {
+    margin: 1em 0;
+  }
+  p {
+    line-height: 1.7em !important;
+  }
+  .inner {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 55% auto;
+        grid-template-columns: 55% auto;
+  }
+  .inner .left {
+    text-align: left;
+    padding: 0 2em;
+    min-height: 100vh;
+    display: -ms-grid;
+    display: grid;
+  }
+  .inner .left .content {
+    padding: 0 3em;
+  }
+  .inner .left h1 {
+    margin: 0;
+    font-size: 2.4em;
+  }
+  .inner .left h1 span {
+    display: block;
+  }
+  .inner .right {
+    text-align: right;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding: 0 2em 1.5em;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .inner .right .right-inner {
+    width: 90%;
+  }
+  .inner .right input {
+    margin: 1em 0;
+  }
+  .inner .right input.button {
+    margin: 0;
+  }
+  .inner .right .error {
+    margin: -1.5em 0 1em;
+  }
+  .proto-container {
+    -webkit-clip-path: inset(0 45% 0 0);
+            clip-path: inset(0 45% 0 0);
+    position: absolute;
+    top: 20%;
+    height: 70%;
+    z-index: 0;
+    width: 100%;
+    pointer-events: none;
+  }
+  .proto-container .proto {
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    width: 19%;
+    height: 80%;
+    float: left;
+    margin-left: 1em;
+    -webkit-transform: translateX(10%);
+            transform: translateX(10%);
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  body {
+    font-size: 1.3rem;
+  }
+  .content {
+    padding: 0 6em !important;
+  }
+  .right-inner {
+    width: 95% !important;
+  }
+}
+/*# sourceMappingURL=main.css.map */
